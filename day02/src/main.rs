@@ -8,8 +8,7 @@ fn get_input() -> Vec<(char, char)> {
 }
 
 fn part1(input: &[(char,char)]) -> i64 {
-    input.iter().map(|(opp,you)| {
-        match (opp, you) {
+    input.iter().map(|x| match x {
             ('A', 'X') => 3 + 1,
             ('B', 'X') => 0 + 1,
             ('C', 'X') => 6 + 1,
@@ -20,13 +19,11 @@ fn part1(input: &[(char,char)]) -> i64 {
             ('B', 'Z') => 6 + 3,
             ('C', 'Z') => 3 + 3,
             _ => panic!()
-        }
     }).sum()
 }
 
 fn part2(input: &[(char,char)]) -> i64 {
-    input.iter().map(|(opp,you)| {
-        match (opp, you) {
+    input.iter().map(|x| match x {
             ('A', 'X') => 0 + 3,
             ('B', 'X') => 0 + 1,
             ('C', 'X') => 0 + 2,
@@ -37,7 +34,6 @@ fn part2(input: &[(char,char)]) -> i64 {
             ('B', 'Z') => 6 + 3,
             ('C', 'Z') => 6 + 1,
             _ => panic!()
-        }
     }).sum()
 }
 
